@@ -1,0 +1,115 @@
+*
+{
+	margin: 		0px;			/* Overwrites default margin and padding to 0px */
+	padding: 		0px;			
+	box-sizing: 	border-box;		/* Applies this setting on all elements of the page */
+}
+
+/*Desktop view*/
+@media (min-width: 992px)
+{
+	.col-lg-4
+	{
+		float: 			left;
+		margin: 		0% 1% 0% 2%;  	/* 1% right, 2% left */
+		width: 			30%;			/* Total size of row is: 30% x 3boxes = 90% 
+																			  + 3% total right margin 
+																			  + 6% total left margin 
+																			  = 99%; */	
+	}
+
+}
+
+/*Tablet view*/
+@media (min-width: 768px) and (max-width: 991px)
+{
+	.col-md-6, .col-md-12
+	{
+		float: 			left;				
+
+	}	
+
+	.col-md-6
+	{
+		margin: 		0% 0% 0% 2%;    /* 2% left */
+		width: 			45%;			/* Total size of the row is: 45% x 2boxes = 90% 
+																				  + 4% of left margin 
+																				  = 94%*/
+	}
+
+	.col-md-12
+	{		
+		margin: 		2% 0% 0% 2%;    /* 2% top, 2% left  */		
+		width: 			92%;			/* Total size of the row is: 92% x 1box = 92% 
+																				+ 2% left margin 
+																				= 94% */ 		
+	}
+
+}
+
+/*Mobile view*/
+@media (max-width: 767px)
+{
+	.col-sm-12
+	{									/* No floating left needed as <section> is already a block element  */
+		margin: 		0% 0% 2% 2%;    /* 2% bottom, 2% left */				
+		width: 			96%;			/* Total size of each row is: 96% x 1box = 96% 
+																				 + 2% left margin 
+																				 = 98% */
+	}
+}
+
+body
+{
+	font-family: 	Arial, Helvetica, sans-serif;
+	font-size: 		16px;				/* Defaulting 10px text size in the whole page */ 
+}
+
+#theHeader
+{
+	text-align: 	center;	
+	margin: 		30px auto;	
+	font-size: 		175%; /* Sets the font size of the heading to be 75% larger than the font size of the dummy text.*/
+	font-weight: 	bold;
+}
+
+ #container > section
+{
+	position: 		relative; /* Needed to position section title later */
+	background: 	#8D8C8B;  /* Grey */
+	font-weight: 	bold;	
+	border: 		1px solid black;
+	
+}
+
+section > header
+{
+	position: 		absolute;
+	top:			-1px;			/* To avoid double border line in top side of the title  */ 
+	right: 			-1px;			/* To avoid double border line in right side of the title  */ 
+	text-align: 	center;	
+	font-size: 		125%;			/* Sets the font size of the section title to be 25% larger than the font size of the dummy text.*/
+	padding: 		3px;
+	width: 			35%;
+	border: 		1px solid black;
+}
+
+#chicken > header
+{
+	background-color: 	#DF6F57;
+}
+
+#beef > header
+{ 	background-color: 	#B63333;
+	color: 				#FFFFFF;
+}
+
+#sushi > header
+{
+	background-color: #E1C75B;
+} 
+
+article
+{
+	padding: 		40px 15px 15px 10px; /* Prevents text overlapping with section title */
+}
